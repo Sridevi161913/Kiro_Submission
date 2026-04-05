@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="SafeContacts - Quick access to emergency contacts">
+    <title>SafeContacts - Emergency Contact Manager</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>🚨 SafeContacts</h1>
+            <p class="subtitle">Your Emergency Contacts</p>
+        </header>
+
+        <section class="add-contact-section">
+            <h2>Add New Contact</h2>
+            <form id="contactForm">
+                <div class="form-group">
+                    <label for="contactName">Name</label>
+                    <input 
+                        type="text" 
+                        id="contactName" 
+                        placeholder="Enter contact name" 
+                        required
+                        aria-label="Contact name"
+                    >
+                </div>
+                <div class="form-group">
+                    <label for="contactPhone">Phone Number</label>
+                    <input 
+                        type="tel" 
+                        id="contactPhone" 
+                        placeholder="Enter phone number" 
+                        required
+                        aria-label="Contact phone number"
+                    >
+                </div>
+                <button type="submit" class="btn btn-add">Add Contact</button>
+            </form>
+        </section>
+
+        <section class="contacts-section">
+            <h2>Emergency Contacts</h2>
+            <div id="contactsList" class="contacts-list">
+                <!-- Contacts will be dynamically inserted here -->
+            </div>
+            <p id="emptyState" class="empty-state">No contacts yet. Add your first emergency contact above.</p>
+        </section>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>
